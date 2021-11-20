@@ -1,19 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TestGenerator;
-
-namespace Application
-{
-    class Application
-    {
-        public static void Main()
-        {
-            DecomposeCode decompose = new DecomposeCode();
-            string code = @"
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TestGenerator
 {
@@ -48,14 +35,5 @@ namespace TestGenerator
         public Dummy method(int i, Dummy n) {
             return null;
         } 
-    }
-}";
-            var context = decompose.DecomposeType(code);
-            var generate = new CreateTestCode();
-            foreach (var item in context)
-            {
-                Console.WriteLine(generate.AsyncCreateTestClass(item));
-            }
-        }
     }
 }
