@@ -30,5 +30,37 @@ namespace TestGenerator.Tests
             Console.WriteLine(result.Count());
             Assert.AreEqual(result.Count(), 8);
         }
+
+        [TestMethod()]
+        public void CountOfCreatedMethodContext()
+        {
+            var result = decompose.DecomposeType(text);
+            Console.WriteLine(result.Count());
+            Assert.AreEqual(result.Count(), 8);
+        }
+
+        [TestMethod()]
+        public void CheckNames()
+        {
+            var result = decompose.DecomposeType(text);
+            Console.WriteLine(result.Count());
+            Assert.AreEqual(result.Count(), 8);
+        }
+
+        [TestMethod()]
+        public void CheckNamespace()
+        {
+            var result = decompose.DecomposeType(text);
+            Console.WriteLine(result.Count());
+            Assert.AreEqual(result.Count(), 8);
+        }
+
+        [TestMethod()]
+        public void CheckMethodNames()
+        {
+            var result = decompose.DecomposeType(text);
+            Console.WriteLine(result.Count());
+            Assert.AreEqual(result.Count(), 8);
+        }
     }
 }
