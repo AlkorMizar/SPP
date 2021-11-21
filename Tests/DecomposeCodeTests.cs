@@ -62,5 +62,29 @@ namespace TestGenerator.Tests
             Console.WriteLine(result.Count());
             Assert.AreEqual(result.Count(), 8);
         }
+
+        [TestMethod()]
+        public void CheckMethodParams()
+        {
+            var result = decompose.DecomposeType(text);
+            Console.WriteLine(result.Count());
+            Assert.AreEqual(result.Count(), 8);
+        }
+
+        [TestMethod()]
+        public void CheckMethodReturn()
+        {
+            var result = decompose.DecomposeType(text);
+            Console.WriteLine(result.Count());
+            Assert.AreEqual(result.Count(), 8);
+        }
+
+        [TestMethod()]
+        public void CheckConstructor()
+        {
+            var result = decompose.DecomposeType(text);
+            Console.WriteLine(result.Count());
+            Assert.AreEqual(result.Count(), 8);
+        }
     }
 }
