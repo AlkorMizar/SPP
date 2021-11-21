@@ -9,6 +9,7 @@ namespace TestGeneratormain.Context
     public record Code
     {
         public string CodeText { get; set; }
-        public string Name { get; set; }
+        public string Name { get ; set; }
+        public string Path { get { return @"D:\Projects\C#\Spp\Tests\OutputOfGeneration" + Name + ".txt"; } }
     }
 }

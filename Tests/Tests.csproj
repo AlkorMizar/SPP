@@ -19,4 +19,8 @@
     <ProjectReference Include="..\TestGeneratormain\TestGeneratormain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="OutputOfGeneration\" />
+  </ItemGroup>
+
 </Project>

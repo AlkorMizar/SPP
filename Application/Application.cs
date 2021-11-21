@@ -7,7 +7,7 @@ namespace Application
 {
     class Application
     {
-        public static void Main()
+        static async System.Threading.Tasks.Task Main(string[] args)
         {
             DecomposeCode decompose = new DecomposeCode();
             string code = @"
@@ -50,12 +50,11 @@ namespace TestGenerator
         } 
     }
 }";
-            var context = decompose.DecomposeType(code);
-            var generate = new CreateTestCode();
-            foreach (var item in context)
-            {
-                Console.WriteLine(generate.AsyncCreateTestClass(item));
-            }
+
+            var pipeline = new Pipeline(5);
+            await pipeline.PerformProcessing(new string[]{ @"D:\Projects\C#\Spp\TestGeneratormain\Code.cs"});
+            Console.WriteLine("End.Press button.");
+            Console.ReadLine();
         }
     }
 }
